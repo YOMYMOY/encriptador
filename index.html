@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Encriptador</title>
+    <script src="https://kit.fontawesome.com/75929d6988.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-bug"></i>
+        </div>
+        <div class="current-time" id="current-time"></div>
+    </header>
+    <main>
+        <section class="ingreso">
+            <textarea class="ingreso__texto" name="" id="entrada" placeholder="Ingrese el texto aquí"></textarea>
+            <p id="msgError" class="ingreso__restricciones"><i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos</p>
+        </section>
+        <section class="btn">
+            <button class="btn__encriptar" onclick="encriptar()">
+                Encriptar
+            </button>
+            <button class="btn__desencriptar" onclick="desencriptar()">
+                Desencriptar
+            </button>
+        </section>
+        <section class="encriptacion">
+            <img id="imagen" src="./assets/muñeco.png" alt="niño con lupa">
+            <div class="salida">
+                
+                <div id="salida__mensaje">
+                    <p class="salida__texto1">Ningún mensaje fue encontrado</p>
+                    <p class="salida__texto2">Ingrese el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <textarea id="resultado"></textarea>
+            </div>
+            <button id="btn__copiar" class="btn__copiar" onclick="copiarTexto()">Copiar</button>
+        </section>
+    </main>
+    <footer>
+        <p>Encriptador por YOMYMOY</p>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>
